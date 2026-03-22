@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Ironforge Gym. Claim your free trial, ask about membership, or get in touch with our team.">
+  <title>Contact | Ironforge Gym</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="header scrolled">
+    <div class="container">
+      <a href="./index.html" class="logo">IRONFORGE<span>GYM</span></a>
+      <div class="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      <nav class="nav-links">
+        <a href="./index.html">Home</a>
+        <a href="./classes.html">Classes</a>
+        <a href="./trainers.html">Trainers</a>
+        <a href="./membership.html">Membership</a>
+        <a href="./transformations.html">Transformations</a>
+        <a href="./contact.html" class="active">Contact</a>
+        <a href="./contact.html" class="btn btn-primary">Free Trial</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="container fade-in">
+      <h1>CONTACT US</h1>
+      <p>Get in touch with our team</p>
+    </div>
+  </div>
+
+  <!-- CONTACT INFO CARDS + FORM -->
+  <section class="section-padding">
+    <div class="container">
+
+      <div class="contact-info-cards fade-in">
+        <div class="contact-card">
+          <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <h3>Visit Us</h3>
+            <p>123 Fitness Ave, Ground Floor<br>Your City, ST 00000</p><!-- CLIENT EDIT -->
+            <p><strong>Hours:</strong><br>
+               Mon–Fri: 5:00 AM – 11:00 PM<br>
+               Sat–Sun: 7:00 AM – 9:00 PM</p><!-- CLIENT EDIT -->
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon"><i class="fas fa-phone"></i></div>
+          <div>
+            <h3>Call Us</h3>
+            <a href="tel:+919980-908419"></i>+91 99809 08419</a>
+            <br><a href="tel:+919980-908419"></i>Whatsapp : +91 99809 08419</a></br>
+            
+            
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <h3>Email Us</h3>
+            <a href="mailto:kc.webdev08@gmail.com"></i>kc.webdev08@gmail.com</a>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-container fade-in">
+        <h2 style="margin-bottom:8px;">Claim Your Free Trial</h2>
+        <p style="color:var(--text-light); margin-bottom:32px;">
+          Fill in the form and we'll get back to you within 2 hours.<!-- CLIENT EDIT -->
+        </p>
+
+        <!-- ============================================================
+             WEB3FORMS INTEGRATION
+             ---------------------------------------------------------------
+             Your access key is already set below.
+             Submissions go directly to your email: chetuap2400@gmail.com
+             No login needed — just works! ✅
+             ============================================================ -->
+        <form
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          class="contact-form">
+
+          <!-- DO NOT REMOVE — Your Web3Forms Access Key -->
+          <input type="hidden" name="access_key" value="21a8e14e-d1f2-4ceb-a3bf-13ce4a70f038">
+
+          <!-- Email subject line you receive -->
+          <input type="hidden" name="subject" value="New Free Trial Request - Ironforge Gym">
+
+          <!-- Redirects to thank-you page after submit -->
+          <input type="hidden" name="redirect" value="./thank-you.html">
+
+          <!-- Spam protection -->
+          <input type="checkbox" name="botcheck" style="display:none">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" name="first-name" placeholder="First name" required>
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" name="last-name" placeholder="Last name" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="+91 00000 00000" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="goal">Your Main Goal</label>
+            <select id="goal" name="goal" required>
+              <option value="" disabled selected>-- Select your goal --</option>
+              <option value="Lose Weight">Lose Weight &amp; Burn Fat</option>
+              <option value="Build Muscle">Build Muscle &amp; Strength</option>
+              <option value="Improve Cardio">Improve Cardio &amp; Endurance</option>
+              <option value="Athletic Performance">Athletic Performance</option>
+              <option value="General Health">General Health &amp; Wellness</option>
+              <option value="Try a Class">Try a Specific Class</option>
+            </select><!-- CLIENT EDIT: goal options -->
+          </div>
+
+          <div class="form-group">
+            <label for="class-interest">Interested In</label>
+            <select id="class-interest" name="class-interest">
+              <option value="No Preference">No Preference</option>
+              <option value="HIIT Training">HIIT Training</option>
+              <option value="Powerlifting">Powerlifting</option>
+              <option value="Boxing & MMA">Boxing &amp; MMA</option>
+              <option value="Spin Cycling">Spin Cycling</option>
+              <option value="Yoga & Mobility">Yoga &amp; Mobility</option>
+              <option value="Functional Fitness">Functional Fitness</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message (Optional)</label>
+            <textarea id="message" name="message" rows="4" placeholder="Any questions or specific requirements..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" style="font-size:1rem; padding:16px;">
+            CLAIM MY FREE TRIAL <i class="fas fa-arrow-right"></i>
+          </button>
+
+        </form>
+      </div>
+
+      <!-- GOOGLE MAPS EMBED -->
+      <div class="map-container fade-in">
+        <iframe
+          src="https://maps.google.com/maps?q=Basavangudi,Bengaluru&output=embed"
+          width="100%" height="400" style="border:0; display:block;"
+          allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div><!-- REPLACE: embed your real gym location Google Maps URL -->
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="./index.html" class="footer-logo">IRONFORGE<span>GYM</span></a>
+          <p>Forge your strongest self. Premium training for serious athletes.</p>
+          <div class="social-icons">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <div class="footer-links">
+            <a href="./index.html">Home</a>
+            <a href="./classes.html">Classes</a>
+            <a href="./trainers.html">Trainers</a>
+            <a href="./membership.html">Membership</a>
+            <a href="./contact.html">Contact</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Programs</h3>
+          <div class="footer-links">
+            <a href="./classes.html">HIIT Training</a>
+            <a href="./classes.html">Powerlifting</a>
+            <a href="./classes.html">Boxing &amp; MMA</a>
+            <a href="./classes.html">Spin Cycling</a>
+            <a href="./classes.html">Yoga &amp; Mobility</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Visit Us</h3>
+          <div class="footer-links">
+            <span><i class="fas fa-map-marker-alt"></i> 123 Fitness Ave, Your City, ST 00000</span>
+            <span><i class="fas fa-clock"></i> Mon–Fri: 5AM–11PM · Sat–Sun: 7AM–9PM</span>
+            <!-- CLIENT EDIT: phone number — update href="tel:+1XXXXXXXXXX" and display text -->
+            <a href="tel:+919980-908419"></i>+91 99809 08419</a>
+            
+            <!-- CLIENT EDIT: email — update href="mailto:..." and display text -->
+            <a href="mailto:kc.webdev08@gmail.com"><i class="fas fa-envelope"></i>kc.webdev08@gmail.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Ironforge Gym. All rights reserved.</p>
+        <div>
+          <a href="./privacy-policy.html">Privacy Policy</a>
+          <a href="./terms-of-service.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOATING BUTTON -->
+  <!-- CLIENT EDIT: update phone number in href — format: https://wa.me/COUNTRYCODEPHONENUMBER -->
+  <a href="https://wa.me/9980908419" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>

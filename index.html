@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ironforge Gym — Where serious athletes forge their strongest self. Premium equipment, elite trainers, and real results.">
+  <title>Home | Ironforge Gym</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVBAR
+       - Uses "scrolled" class so the navbar is always opaque black.
+       - On inner pages this class is set by default in the HTML.
+       - On the home page it was transparent; "scrolled" forces the
+         same solid dark background across all pages.
+       ============================================================ -->
+  <header class="header scrolled">
+    <div class="container">
+      <a href="./index.html" class="logo">IRONFORGE<span>GYM</span></a>
+      <div class="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      <nav class="nav-links">
+        <a href="./index.html" class="active">Home</a>
+        <a href="./classes.html">Classes</a>
+        <a href="./trainers.html">Trainers</a>
+        <a href="./membership.html">Membership</a>
+        <a href="./transformations.html">Transformations</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./contact.html" class="btn btn-primary">Free Trial</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <!--
+      =====================================================
+      VIDEO BACKGROUND
+      Your video file must be in the ironforge-gym/ root
+      folder (same folder as index.html).
+      The src below is already set to your video filename.
+      If you rename the file, update the src to match.
+      =====================================================
+    -->
+    <video
+      class="hero-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      poster="https://picsum.photos/1920/1080?grayscale">
+      <!-- ▼▼▼ PASTE YOUR VIDEO LINK HERE if hosting online,
+               OR keep as-is if the video is in the same folder as index.html ▼▼▼ -->
+      <source src="video/Powerlifter_Silhouette_Deadlift_Animation.mp4" type="video/mp4">
+      <!-- ▲▲▲ PASTE YOUR VIDEO LINK HERE ▲▲▲ -->
+    </video>
+
+    <div class="hero-overlay"></div>
+    <div class="container fade-in">
+      <p class="hero-eyebrow">EST. 2015 · YOUR CITY <!-- CLIENT EDIT --></p>
+      <h1>NO LIMITS.<br><span>NO EXCUSES.</span><br>NO EQUAL.</h1>
+      <p class="hero-sub">Ironforge Gym is where serious athletes and first-timers alike come to transform. Premium equipment. Expert coaches. Real results.</p>
+      <!-- CLIENT EDIT: gym description -->
+      <div class="hero-buttons">
+        <a href="./contact.html" class="btn btn-primary">
+          CLAIM FREE TRIAL <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="./classes.html" class="btn btn-outline">
+          VIEW CLASSES
+        </a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <span class="trust-number">2,000+</span><!-- CLIENT EDIT -->
+          <span class="trust-label">Active Members</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <span class="trust-number">50+</span><!-- CLIENT EDIT -->
+          <span class="trust-label">Weekly Classes</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <span class="trust-number">15+</span><!-- CLIENT EDIT -->
+          <span class="trust-label">Elite Trainers</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       STATS BAR
+       - "fade-in" intentionally removed here so the stats counter
+         IntersectionObserver can fire independently without the
+         fade-in observer consuming the intersection event first.
+       - The counter animation is handled by script.js (section 4).
+       ============================================================ -->
+  <section class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number" data-target="2000">0</div>
+          <div class="stat-label">Active Members</div><!-- CLIENT EDIT -->
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="50">0</div>
+          <div class="stat-label">Weekly Classes</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="15">0</div>
+          <div class="stat-label">Elite Trainers</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="98">0</div>
+          <div class="stat-label">% Member Retention</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SNAPSHOT -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="about-layout fade-in">
+        <div class="about-text">
+          <p class="section-label">OUR STORY</p>
+          <h2>More Than A Gym.<br>A Movement.</h2>
+          <!-- CLIENT EDIT -->
+          <p>Founded in 2015, Ironforge Gym was built on one belief: every person deserves access to world-class training. We set out to create a space where serious athletes and determined beginners could train side by side, pushed by the same standard of excellence that defines champions.</p>
+          <p>Our facility houses elite-grade equipment, expert-led programming, and a coaching team that treats every member as an athlete. Whether you're chasing a podium or your first pull-up, Ironforge is where your transformation begins.</p>
+          <!-- CLIENT EDIT: both paragraphs -->
+          <div class="about-features">
+            <div><i class="fas fa-check-circle"></i> State-of-the-Art Equipment</div>
+            <div><i class="fas fa-check-circle"></i> Certified Elite Trainers</div>
+            <div><i class="fas fa-check-circle"></i> Open 24/7, 365 Days</div><!-- CLIENT EDIT -->
+            <div><i class="fas fa-check-circle"></i> Free Nutrition Coaching</div>
+          </div>
+          <a href="./trainers.html" class="btn btn-primary" style="margin-top:32px;">MEET OUR TRAINERS</a>
+        </div>
+        <div class="about-image">
+          <img src="images/gymview.webp" alt="Inside Ironforge Gym">
+          <div class="about-badge">
+            <span class="badge-number">10+</span><!-- CLIENT EDIT -->
+            <span class="badge-text">Years of Excellence</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLASSES PREVIEW -->
+  <section class="section-padding" style="background: var(--surface);">
+    <div class="container">
+      <p class="section-label fade-in" style="text-align:center;">WHAT WE OFFER</p>
+      <h2 class="section-title fade-in">Our Programs</h2>
+      <div class="classes-grid fade-in">
+
+        <div class="class-card">
+          <div class="class-img">
+            <img src="images/ClassHITT.webp" alt="HIIT Training">
+            <div class="class-overlay"></div>
+            <span class="class-duration">45 MIN</span>
+          </div>
+          <div class="class-content">
+            <p class="class-category">HIGH INTENSITY</p>
+            <h3>HIIT TRAINING</h3>
+            <p class="class-desc">Burn fat. Build endurance. Destroy your limits.</p>
+            <a href="./classes.html" class="class-link">BOOK CLASS <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="class-card">
+          <div class="class-img">
+            <img src="images/ClassPowerlifting.webp" alt="Powerlifting">
+            <div class="class-overlay"></div>
+            <span class="class-duration">60 MIN</span>
+          </div>
+          <div class="class-content">
+            <p class="class-category">STRENGTH</p>
+            <h3>POWERLIFTING</h3>
+            <p class="class-desc">Build raw, functional strength that lasts a lifetime.</p>
+            <a href="./classes.html" class="class-link">BOOK CLASS <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="class-card">
+          <div class="class-img">
+            <img src="images/ClassBoxing.webp" alt="Boxing & MMA">
+            <div class="class-overlay"></div>
+            <span class="class-duration">50 MIN</span>
+          </div>
+          <div class="class-content">
+            <p class="class-category">COMBAT FITNESS</p>
+            <h3>BOXING & MMA</h3>
+            <p class="class-desc">Hit harder. Move faster. Condition your entire body.</p>
+            <a href="./classes.html" class="class-link">BOOK CLASS <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+      </div>
+      <div style="text-align:center; margin-top:48px;" class="fade-in">
+        <a href="./classes.html" class="btn btn-primary">VIEW ALL CLASSES</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAINERS PREVIEW -->
+  <section class="section-padding">
+    <div class="container">
+      <p class="section-label fade-in" style="text-align:center;">THE COACHES</p>
+      <h2 class="section-title fade-in">Meet Your Trainers</h2>
+      <div class="trainers-grid fade-in">
+
+        <div class="trainer-card">
+          <div class="trainer-img">
+            <img src="images/CoachHITT.jpg" alt="Marcus Cole">
+          </div>
+          <div class="trainer-info">
+            <p class="trainer-specialty">HIIT & STRENGTH COACH</p>
+            <h3>MARCUS COLE</h3>
+            <p class="trainer-bio">12 years · NSCA Certified · 400+ clients transformed</p>
+            <div class="trainer-social">
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a><!-- REPLACE -->
+            </div>
+          </div>
+        </div>
+
+        <div class="trainer-card">
+          <div class="trainer-img">
+            <img src="images/CoachBoxing.jpg" alt="Sarah Brooks">
+          </div>
+          <div class="trainer-info">
+            <p class="trainer-specialty">BOXING COACH</p>
+            <h3>SARAH BROOKS</h3>
+            <p class="trainer-bio">8 years · Level 3 PT · Former amateur boxing champion</p>
+            <div class="trainer-social">
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a><!-- REPLACE -->
+            </div>
+          </div>
+        </div>
+
+        <div class="trainer-card">
+          <div class="trainer-img">
+            <img src="images/CoachPowerlifting.jpg" alt="James Vega">
+          </div>
+          <div class="trainer-info">
+            <p class="trainer-specialty">POWERLIFTING COACH</p>
+            <h3>JAMES VEGA</h3>
+            <p class="trainer-bio">10 years · IPF Judge · 3 national-level athletes coached</p>
+            <div class="trainer-social">
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a><!-- REPLACE -->
+            </div>
+          </div>
+        </div>
+
+        <div class="trainer-card">
+          <div class="trainer-img">
+            <img src="images/CoachYoga.jpg" alt="Priya Sharma">
+          </div>
+          <div class="trainer-info">
+            <p class="trainer-specialty">YOGA & RECOVERY COACH</p>
+            <h3>PRIYA SHARMA</h3>
+            <p class="trainer-bio">7 years · 500hr YTT · Sports recovery specialist</p>
+            <div class="trainer-social">
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a><!-- REPLACE -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div style="text-align:center; margin-top:48px;" class="fade-in">
+        <a href="./trainers.html" class="btn btn-primary">MEET ALL TRAINERS</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-section fade-in">
+    <div class="container">
+      <p class="section-label" style="text-align:center;">REAL RESULTS</p>
+      <h2 class="section-title">Members Don't Lie.</h2>
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card">
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <span class="result-badge">Lost 18kg in 12 weeks</span>
+          <p class="quote">"I'd tried 4 other gyms. Nothing clicked until Ironforge. The coaches know your name, check your form, and push you perfectly. Down 18kg and I feel unstoppable."</p>
+          <div class="client-info">
+            <img src="https://picsum.photos/seed/member1/80/80" alt="Alex R.">
+            <div>
+              <div class="client-name">Akash.</div>
+              <div class="client-since">Member since 2022</div>
+            </div>
+          </div>
+        </div><!-- CLIENT EDIT -->
+
+        <div class="testimonial-card">
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <span class="result-badge">Ran first marathon</span>
+          <p class="quote">"The yoga and functional fitness combo fixed my knee pain that stopped me running for 2 years. Last month I finished my first marathon. I still can't believe it."</p>
+          <div class="client-info">
+            <img src="https://picsum.photos/seed/member2/80/80" alt="Divya M.">
+            <div>
+              <div class="client-name">Divya M.</div>
+              <div class="client-since">Member since 2023</div>
+            </div>
+          </div>
+        </div><!-- CLIENT EDIT -->
+
+        <div class="testimonial-card">
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <span class="result-badge">Added 50kg to squat</span>
+          <p class="quote">"The powerlifting program is no joke. Coach James rebuilt my entire technique from scratch. Added 50kg to my squat in 6 months with zero injuries. The methodology works."</p>
+          <div class="client-info">
+            <img src="https://picsum.photos/seed/member3/80/80" alt="Tom K.">
+            <div>
+              <div class="client-name">Manoj Kumar</div>
+              <div class="client-since">Member since 2021</div>
+            </div>
+          </div>
+        </div><!-- CLIENT EDIT -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner fade-in">
+    <div class="container">
+      <h2>Ready to Start Your Transformation?</h2><!-- CLIENT EDIT -->
+      <p>Join over 2,000 members who have already changed their lives.</p><!-- CLIENT EDIT: member count -->
+      <div class="cta-buttons">
+        <a href="./contact.html" class="btn btn-primary">CLAIM FREE TRIAL</a>
+        <a href="./membership.html" class="btn btn-outline">VIEW MEMBERSHIP</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="./index.html" class="footer-logo">IRONFORGE<span>GYM</span></a><!-- CLIENT EDIT: gym name -->
+          <p>Forge your strongest self. Premium training for serious athletes.</p>
+          <div class="social-icons">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a><!-- REPLACE -->
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><!-- REPLACE -->
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a><!-- REPLACE -->
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a><!-- REPLACE -->
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <div class="footer-links">
+            <a href="./index.html">Home</a>
+            <a href="./classes.html">Classes</a>
+            <a href="./trainers.html">Trainers</a>
+            <a href="./membership.html">Membership</a>
+            <a href="./contact.html">Contact</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Programs</h3>
+          <div class="footer-links">
+            <a href="./classes.html">HIIT Training</a>
+            <a href="./classes.html">Powerlifting</a>
+            <a href="./classes.html">Boxing &amp; MMA</a>
+            <a href="./classes.html">Spin Cycling</a>
+            <a href="./classes.html">Yoga &amp; Mobility</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Visit Us</h3>
+          <div class="footer-links">
+            <!-- CLIENT EDIT: address -->
+            <span><i class="fas fa-map-marker-alt"></i>123 Fitness Ave, Your City, ST 00000</span>
+            <!-- CLIENT EDIT: opening hours -->
+            <span><i class="fas fa-clock"></i>Mon–Fri: 5AM–11PM · Sat–Sun: 7AM–9PM</span>
+            <!-- CLIENT EDIT: phone number — update href="tel:+1XXXXXXXXXX" and display text -->
+            <a href="tel:+919980908419"><i class="fas fa-phone"></i>+91 99809 08419</a>
+            <!-- CLIENT EDIT: email — update href="mailto:..." and display text -->
+            <a href="mailto:kc.webdev08@gmail.com"><i class="fas fa-envelope"></i>kc.webdev08@gmail.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Ironforge Gym. All rights reserved.</p><!-- CLIENT EDIT -->
+        <div>
+          <a href="./privacy-policy.html">Privacy Policy</a>
+          <a href="./terms-of-service.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOATING BUTTON -->
+<a href="https://wa.me/9980908419" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp"><!-- REPLACE: phone number -->
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>

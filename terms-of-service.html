@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CLIENT EDIT: update description if gym name changes -->
+  <meta name="description" content="Terms of Service for Ironforge Gym — rules, membership conditions, and liability information.">
+  <title>Terms of Service | Ironforge Gym</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Shared stylesheet — same as every other page -->
+  <link rel="stylesheet" href="./css/styles.css">
+
+  <style>
+    /* ============================================================
+       TERMS OF SERVICE PAGE — Page-specific styles
+       Identical structure to privacy-policy.html for consistency.
+       These do not affect any other page on the site.
+       ============================================================ */
+
+    .policy-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 80px 20px 100px;
+    }
+
+    .policy-meta {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-bottom: 56px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .policy-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Barlow', sans-serif;
+      font-size: 0.85rem;
+      color: var(--text-light);
+    }
+    .policy-meta-item i {
+      color: var(--primary-color);
+      font-size: 0.8rem;
+    }
+
+    .policy-toc {
+      background: var(--surface-2);
+      border: 1px solid var(--border-color);
+      border-left: 3px solid var(--primary-color);
+      padding: 28px 32px;
+      margin-bottom: 56px;
+      border-radius: 2px;
+    }
+    .policy-toc h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--primary-color);
+      margin-bottom: 16px;
+    }
+    .policy-toc ol {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      counter-reset: toc-counter;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .policy-toc ol li {
+      counter-increment: toc-counter;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+    .policy-toc ol li::before {
+      content: counter(toc-counter, decimal-leading-zero);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      color: var(--primary-color);
+      flex-shrink: 0;
+    }
+    .policy-toc ol li a {
+      font-family: 'Barlow', sans-serif;
+      font-size: 0.9rem;
+      color: var(--text-light);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .policy-toc ol li a:hover { color: var(--white); }
+
+    .policy-section {
+      margin-bottom: 56px;
+      scroll-margin-top: 96px;
+    }
+    .policy-section-number {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--primary-color);
+      display: block;
+      margin-bottom: 10px;
+    }
+    .policy-section h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 1.8rem;
+      color: var(--white);
+      margin-bottom: 20px;
+      letter-spacing: 0.02em;
+    }
+    .policy-section p {
+      font-family: 'Barlow', sans-serif;
+      font-size: 0.95rem;
+      color: var(--text-light);
+      line-height: 1.85;
+      margin-bottom: 16px;
+    }
+    .policy-section p:last-child { margin-bottom: 0; }
+    .policy-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .policy-section ul li {
+      font-family: 'Barlow', sans-serif;
+      font-size: 0.95rem;
+      color: var(--text-light);
+      line-height: 1.7;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .policy-section ul li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--primary-color);
+      flex-shrink: 0;
+      margin-top: 8px;
+    }
+
+    .policy-divider {
+      width: 100%;
+      height: 1px;
+      background: var(--border-color);
+      margin-bottom: 56px;
+    }
+
+    .policy-highlight {
+      background: rgba(232, 255, 0, 0.05);
+      border: 1px solid rgba(232, 255, 0, 0.2);
+      border-left: 3px solid var(--primary-color);
+      padding: 20px 24px;
+      margin: 24px 0;
+      border-radius: 2px;
+    }
+    .policy-highlight p { margin: 0; font-size: 0.9rem; }
+    .policy-highlight strong { color: var(--white); font-weight: 600; }
+
+    /* Warning-style highlight (red tint) for important liability clauses */
+    .policy-warning {
+      background: rgba(255, 69, 0, 0.06);
+      border: 1px solid rgba(255, 69, 0, 0.25);
+      border-left: 3px solid var(--secondary-color);
+      padding: 20px 24px;
+      margin: 24px 0;
+      border-radius: 2px;
+    }
+    .policy-warning p { margin: 0; font-size: 0.9rem; }
+    .policy-warning strong { color: #ff6b35; font-weight: 600; }
+
+    .policy-contact-box {
+      background: var(--surface-2);
+      border: 1px solid var(--border-color);
+      border-top: 3px solid var(--primary-color);
+      padding: 32px;
+      margin-top: 64px;
+      text-align: center;
+    }
+    .policy-contact-box h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 1.5rem;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .policy-contact-box p {
+      font-family: 'Barlow', sans-serif;
+      font-size: 0.9rem;
+      color: var(--text-light);
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+
+    .back-to-top {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-light);
+      text-decoration: none;
+      margin-top: 48px;
+      transition: color 0.2s;
+    }
+    .back-to-top:hover { color: var(--primary-color); }
+    .back-to-top i { font-size: 0.75rem; }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="header scrolled">
+    <div class="container">
+      <!-- CLIENT EDIT: update gym name if it changes -->
+      <a href="./index.html" class="logo">IRONFORGE<span>GYM</span></a>
+      <div class="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      <nav class="nav-links">
+        <a href="./index.html">Home</a>
+        <a href="./classes.html">Classes</a>
+        <a href="./trainers.html">Trainers</a>
+        <a href="./membership.html">Membership</a>
+        <a href="./transformations.html">Transformations</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./contact.html" class="btn btn-primary">Free Trial</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="container fade-in">
+      <h1>TERMS OF SERVICE</h1>
+      <p>Rules, membership conditions &amp; liability</p>
+    </div>
+  </div>
+
+  <!-- TERMS CONTENT -->
+  <section style="background: var(--dark-bg);">
+    <div class="policy-wrapper">
+
+      <!-- ── Meta bar ─────────────────────────────── -->
+      <div class="policy-meta fade-in">
+        <!-- CLIENT EDIT: update date whenever you revise these terms -->
+        <div class="policy-meta-item">
+          <i class="fas fa-calendar-alt"></i>
+          <span>Last updated: January 1, 2025</span>
+        </div>
+        <div class="policy-meta-item">
+          <i class="fas fa-file-alt"></i>
+          <span>Version 1.0</span>
+        </div>
+        <!-- CLIENT EDIT: update jurisdiction to match your country / state -->
+        <div class="policy-meta-item">
+          <i class="fas fa-gavel"></i>
+          <span>Governing law: Your Country / State</span>
+        </div>
+      </div>
+
+      <!-- ── Table of Contents ─────────────────────── -->
+      <div class="policy-toc fade-in">
+        <h2>Contents</h2>
+        <ol>
+          <li><a href="#tos-1">Acceptance of Terms</a></li>
+          <li><a href="#tos-2">Membership &amp; Eligibility</a></li>
+          <li><a href="#tos-3">Fees, Payments &amp; Refunds</a></li>
+          <li><a href="#tos-4">Cancellation &amp; Suspension</a></li>
+          <li><a href="#tos-5">Code of Conduct</a></li>
+          <li><a href="#tos-6">Health &amp; Safety</a></li>
+          <li><a href="#tos-7">Liability &amp; Disclaimer</a></li>
+          <li><a href="#tos-8">Intellectual Property</a></li>
+          <li><a href="#tos-9">Amendments</a></li>
+          <li><a href="#tos-10">Governing Law &amp; Disputes</a></li>
+          <li><a href="#tos-11">Contact</a></li>
+        </ol>
+      </div>
+
+      <!-- ── Intro ─────────────────────────────────── -->
+      <div class="policy-section fade-in">
+        <p>
+          <!-- CLIENT EDIT: replace "Ironforge Gym" with your registered legal business name throughout -->
+          These Terms of Service ("Terms") govern your use of the Ironforge Gym website and your
+          membership with us. By accessing our website, signing up for a membership, or participating
+          in any of our classes or services, you agree to be bound by these Terms.
+        </p>
+        <p>
+          Please read these Terms carefully. If you do not agree with any part of them, please
+          do not use our services.
+        </p>
+      </div>
+
+      <div class="policy-divider"></div>
+
+      <!-- ── Section 1 ──────────────────────────────── -->
+      <div class="policy-section fade-in" id="tos-1">
+        <span class="policy-section-number">01</span>
+        <h2>Acceptance of Terms</h2>
+        <p>
+          By registering as a member, booking a class, purchasing a membership plan, or using our
+          website in any way, you confirm that you have read, understood, and agree to these Terms
+          and our Privacy Policy.
+        </p>
+        <p>
+          If you are registering on behalf of another person (e.g. a minor in your care), you
+          confirm that you have the authority to do so and accept these Terms on their behalf.
+        </p>
+      </div>
+
+      <div class="policy-divider"></div>
+
+      <!-- ── Section 2 ──────────────────────────────── -->
+      <div class="policy-section fade-in" id="tos-2">
+        <span class="policy-section-number">02</span>
+        <h2>Membership &amp; Eligibility</h2>
+        <!-- CLIENT EDIT: adjust age requirement and any other eligibility criteria -->
+        <p>Membership at Ironforge Gym is subject to the following conditions:</p>
+        <ul>
+          <li>You must be at least <strong style="color:var(--white)">16 years of age</strong> to become a member. Members under 18 require written consent from a parent or legal guardian.</li>
+          <li>You must complete our membership registration form honestly and accurately.</li>
+          <li>Membership is personal and non-transferable. You may not share, sell, or assign your membership to another person.</li>
+          <li>We reserve the right to refuse or revoke membership at our discretion.</li>
+          <!-- CLIENT EDIT: add or remove eligibility requirements as needed -->
+        </ul>
+      </div>
+
+      <div class="policy-divider"></div>
+
+      <!-- ── Section 3 ──────────────────────────────── -->
+      <div class="policy-section fade-in" id="tos-3">
+        <span class="policy-section-number">03</span>
+        <h2>Fees, Payments &amp; Refunds</h2>
+        <!-- CLIENT EDIT: update all pricing, billing cycle, and refund details to match your actual policy -->
+        <ul>
+          <li><strong style="color:var(--white)">Billing:</strong> Membership fees are billed on a monthly or annual basis, depending on the plan you select. Payment is due on the date of sign-up and on the same date each billing cycle thereafter.</li>
+          <li><strong style="color:var(--white)">Accepted methods:</strong> We accept major credit/debit cards and any other payment methods listed on our checkout page.</li>
+          <li><strong style="color:var(--white)">Failed payments:</strong> If a payment fails, we will retry up to three times. Continued failure may result in suspension of your membership.</li>
+          <li><strong style="color:var(--white)">Price changes:</strong> We reserve the right to change membership fees. We will provide at least 30 days' written notice before any price change takes effect.</li>
+          <li><strong style="color:var(--white)">Refunds:</strong> Monthly memberships are non-refundable once the billing period has started. Annual memberships may be partially refunded on a pro-rata basis within 14 days of purchase, at our discretion.</li>
+        </ul>
+
+        <div class="policy-highlight">
+          <p><strong>Free Trial:</strong> Free trials are available to new members only. One free trial per person. We reserve the right to withdraw or modify the free trial offer at any time.</p>
+        </div>
+      </div>
+
+      <div class="policy-divider"></div>
+
+      <!-- ── Section 4 ──────────────────────────────── -->
+      <div class="policy-section fade-in" id="tos-4">
+        <span class="policy-section-number">04</span>
+        <h2>Cancellation &amp; Suspension</h2>
+        <!-- CLIENT EDIT: update notice period and any cancellation fees to match your policy -->
+        <ul>
+          <li><strong style="color:var(--white)">Cancellation by you:</strong> You may cancel your membership at any time by contacting us in writing. Cancellation takes effect at the end of the current billing period. No partial refunds will be issued for unused time within a billing period.</li>
+          <li><strong style="color:var(--white)">Notice period:</strong> We require a minimum of <strong style="color:var(--white)">30 days' written notice</strong> before your next billing date to prevent the next charge.</li>
+          <li><strong style="color:var(--white)">Suspension by us:</strong> We may suspend or terminate your membership without notice if you violate these Terms, behave in a manner that endangers staff or other members, or if payment cannot be collected after repeated attempts.</li>
+          <li><strong style="color:var(--white)">Freeze option:</strong> Monthly members may freeze their membership for up to 60 days per calendar year for medical reasons, with valid documentation.</li>
+        </ul>
+      </div>
+
+      <div class="policy-divider"></div>
+
+      <!-- ── Section 5 ──────────────────────────────── -->
+      <div class="policy-section fade-in" id="tos-5">
+        <span class="policy-section-number">05</span>
+        <h2>Code of Conduct</h2>
+        <p>All members and visitors are expected to behave respectfully at all times. The following are strictly prohibited:</p>
+
+        <!-- CLIENT EDIT: add or remove conduct rules as appropriate for your gym -->
+        <ul>
+          <li>Harassment, intimidation, or discrimination of any kind towards other members or staff.</li>
+          <li>Use of offensive, abusive, or threatening language on the premises or online channels.</li>
+          <li>Misuse, damage, or theft of gym equipment or property.</li>
+          <li>Using the gym while under the influence of alcohol or non-prescribed drugs.</li>
+          <li>Recording or photographing other members without their explicit consent.</li>
+          <li>Bringing guests into the facility without prior authorisation.</li>
+          <li>Reselling or advertising personal training services without written permission from management.</li>
+        </ul>
+
+        <p>
+          Violations of the Code of Conduct may result in immediate termination of membership
+          without refund.
+        </p>
+      </div>
+
+      <div class="policy-divider"></div>
+
+      <!-- ── Section 6 ──────────────────────────────── -->
+      <div class="policy-section fade-in" id="tos-6">
+        <span class="policy-section-number">06</span>
+        <h2>Health &amp; Safety</h2>
+        <!-- CLIENT EDIT: update with any health requirements specific to your gym or local regulations -->
+        <ul>
+          <li>You confirm that you are in good physical health and are not aware of any medical condition that would prevent you from safely participating in gym activities.</li>
+          <li>If you have a medical condition, injury, or are pregnant, you agree to consult your doctor before using our facilities and to inform our staff.</li>
+          <li>You agree to follow all posted gym rules, safety signage, and instructions given by our staff and trainers at all times.</li>
+          <li>You are responsible for using equipment correctly and safely. If you are unsure how to use any equipment, ask a trainer for assistance.</li>
+          <li>Any injuries sustained on the premises must be reported to a staff member immediately.</li>
+        </ul>
+      </div>
+
+      <div class="policy-divider"></div>
+
+      <!-- ── Section 7 ──────────────────────────────── -->
+      <div class="policy-section fade-in" id="tos-7">
+        <span class="policy-section-number">07</span>
+        <h2>Liability &amp; Disclaimer</h2>
+
+        <div class="policy-warning">
+          <p>
+            <strong>Important:</strong> Physical exercise carries inherent risks of injury. By using
+            our facilities, you acknowledge and voluntarily accept these risks.
+          </p>
+        </div>
+
+        <!-- CLIENT EDIT: have this section reviewed by a legal professional in your jurisdiction -->
+        <p>
+          To the fullest extent permitted by applicable law, Ironforge Gym, its owners, directors,
+          employees, and trainers shall not be liable for any injury, loss, damage, or death
+          arising from your use of our facilities, equipment, or participation in any class or
+          programme.
+        </p>
+        <p>
+          We are not liable for the loss or theft of personal property brought onto the premises.
+          Members are advised not to bring valuables. Lockers are provided as a convenience only
+          and are not guaranteed to be secure.
+        </p>
+        <p>
+          Nothing in these Terms excludes or limits our liability for death or personal injury
+          caused by our negligence, or for fraud or fraudulent misrepresentation.
+        </p>
+      </div>
+
+      <div class="policy-divider"></div>
+
+      <!-- ── Section 8 ──────────────────────────────── -->
+      <div class="policy-section fade-in" id="tos-8">
+        <span class="policy-section-number">08</span>
+        <h2>Intellectual Property</h2>
+        <p>
+          All content on this website — including but not limited to text, images, logos, videos,
+          class schedules, and training programmes — is the property of Ironforge Gym and is
+          protected by applicable intellectual property laws.
+        </p>
+        <p>
+          You may not reproduce, distribute, modify, or use any content from this website without
+          our prior written permission, except for your own personal, non-commercial use.
+        </p>
+      </div>
+
+      <div class="policy-divider"></div>
+
+      <!-- ── Section 9 ──────────────────────────────── -->
+      <div class="policy-section fade-in" id="tos-9">
+        <span class="policy-section-number">09</span>
+        <h2>Amendments</h2>
+        <p>
+          We reserve the right to modify these Terms at any time. Changes will be posted on this
+          page with an updated "Last updated" date. Where changes are material, we will make
+          reasonable efforts to notify members via email.
+        </p>
+        <p>
+          Your continued use of our services after the effective date of any changes constitutes
+          your acceptance of the revised Terms.
+        </p>
+      </div>
+
+      <div class="policy-divider"></div>
+
+      <!-- ── Section 10 ─────────────────────────────── -->
+      <div class="policy-section fade-in" id="tos-10">
+        <span class="policy-section-number">10</span>
+        <h2>Governing Law &amp; Disputes</h2>
+        <!-- CLIENT EDIT: replace with your actual country / state / jurisdiction -->
+        <p>
+          These Terms are governed by and construed in accordance with the laws of
+          <strong style="color:var(--white)">[Your Country / State]</strong>, without regard to
+          conflict of law principles.
+        </p>
+        <p>
+          Any disputes arising out of or in connection with these Terms shall first be attempted
+          to be resolved through good-faith negotiation. If unresolved, disputes shall be subject
+          to the exclusive jurisdiction of the courts of
+          <strong style="color:var(--white)">[Your City / Jurisdiction]</strong>.
+        </p>
+      </div>
+
+      <div class="policy-divider"></div>
+
+      <!-- ── Section 11 ─────────────────────────────── -->
+      <div class="policy-section fade-in" id="tos-11">
+        <span class="policy-section-number">11</span>
+        <h2>Contact</h2>
+        <p>
+          For any questions regarding these Terms, please contact us:
+        </p>
+
+        <!-- CLIENT EDIT: update ALL contact details below -->
+        <ul>
+          <li><strong style="color:var(--white)">Business name:</strong> Ironforge Gym</li>
+          <li><strong style="color:var(--white)">Address:</strong> 123 Fitness Ave, Ground Floor, Your City, ST 00000</li>
+          <li><strong style="color:var(--white)">Email:</strong> <a href="mailto:kc.webdev08@gmail.com" style="color:var(--primary-color);">kc.webdev08@gmail.com</a></li>
+          <li><strong style="color:var(--white)">Phone:</strong> <a href="tel:+919980908419" style="color:var(--primary-color);">+91 99809 08419</a></li>
+        </ul>
+      </div>
+
+      <!-- ── Bottom CTA box ─────────────────────────── -->
+      <div class="policy-contact-box fade-in">
+        <h3>Questions About Our Terms?</h3>
+        <p>We're happy to clarify anything.<br>Our team typically responds within 24 hours.</p>
+        <!-- CLIENT EDIT: update email href if address changes -->
+        <a href="mailto:info@ironforgegym.com" class="btn btn-primary">
+          EMAIL US <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i> Back to Top
+      </a>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <!-- CLIENT EDIT: gym name -->
+          <a href="./index.html" class="footer-logo">IRONFORGE<span>GYM</span></a>
+          <p>Forge your strongest self. Premium training for serious athletes.</p>
+          <div class="social-icons">
+            <!-- CLIENT EDIT: replace # with your real social media URLs -->
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <div class="footer-links">
+            <a href="./index.html">Home</a>
+            <a href="./classes.html">Classes</a>
+            <a href="./trainers.html">Trainers</a>
+            <a href="./membership.html">Membership</a>
+            <a href="./contact.html">Contact</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Programs</h3>
+          <div class="footer-links">
+            <a href="./classes.html">HIIT Training</a>
+            <a href="./classes.html">Powerlifting</a>
+            <a href="./classes.html">Boxing &amp; MMA</a>
+            <a href="./classes.html">Spin Cycling</a>
+            <a href="./classes.html">Yoga &amp; Mobility</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Visit Us</h3>
+          <div class="footer-links">
+            <!-- CLIENT EDIT: address -->
+            <span><i class="fas fa-map-marker-alt"></i>123 Fitness Ave, Your City, ST 00000</span>
+            <!-- CLIENT EDIT: hours -->
+            <span><i class="fas fa-clock"></i>Mon–Fri: 5AM–11PM · Sat–Sun: 7AM–9PM</span>
+            <!-- CLIENT EDIT: phone -->
+            <a href="tel:+9980908419"><i class="fas fa-phone"></i>+91 99809 08419</a>
+            <!-- CLIENT EDIT: email -->
+            <a href="mailto:kc.webdev08@gmail.com"><i class="fas fa-envelope"></i>kc.webdev08@gmail.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <!-- CLIENT EDIT: year and gym name -->
+        <p>&copy; 2025 Ironforge Gym. All rights reserved.</p>
+        <div>
+          <a href="./privacy-policy.html">Privacy Policy</a>
+          <a href="./terms-of-service.html" style="color:var(--primary-color);">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOATING BUTTON -->
+  <!-- CLIENT EDIT: update phone number — format: https://wa.me/COUNTRYCODEPHONENUMBER -->
+  <a href="https://wa.me/9980908419" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>

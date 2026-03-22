@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CLIENT EDIT: update description if gym name changes -->
+  <meta name="description" content="Privacy Policy for Ironforge Gym — how we collect, use, and protect your personal data.">
+  <title>Privacy Policy | Ironforge Gym</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Shared stylesheet — same as every other page -->
+  <link rel="stylesheet" href="./css/styles.css">
+
+  <style>
+    /* ============================================================
+       PRIVACY POLICY PAGE — Page-specific styles
+       These do not affect any other page on the site.
+       ============================================================ */
+
+    /* --- Wrapper that centres the policy document --- */
+    .policy-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 80px 20px 100px;
+    }
+
+    /* --- Meta line shown just below the page header --- */
+    .policy-meta {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-bottom: 56px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .policy-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Barlow', sans-serif;
+      font-size: 0.85rem;
+      color: var(--text-light);
+    }
+    .policy-meta-item i {
+      color: var(--primary-color);
+      font-size: 0.8rem;
+    }
+
+    /* --- Table of contents box --- */
+    .policy-toc {
+      background: var(--surface-2);
+      border: 1px solid var(--border-color);
+      border-left: 3px solid var(--primary-color);
+      padding: 28px 32px;
+      margin-bottom: 56px;
+      border-radius: 2px;
+    }
+    .policy-toc h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--primary-color);
+      margin-bottom: 16px;
+    }
+    .policy-toc ol {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      counter-reset: toc-counter;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .policy-toc ol li {
+      counter-increment: toc-counter;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+    .policy-toc ol li::before {
+      content: counter(toc-counter, decimal-leading-zero);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      color: var(--primary-color);
+      flex-shrink: 0;
+    }
+    .policy-toc ol li a {
+      font-family: 'Barlow', sans-serif;
+      font-size: 0.9rem;
+      color: var(--text-light);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .policy-toc ol li a:hover {
+      color: var(--white);
+    }
+
+    /* --- Each policy section --- */
+    .policy-section {
+      margin-bottom: 56px;
+      scroll-margin-top: 96px; /* offset for fixed navbar */
+    }
+    .policy-section-number {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--primary-color);
+      display: block;
+      margin-bottom: 10px;
+    }
+    .policy-section h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 1.8rem;
+      color: var(--white);
+      margin-bottom: 20px;
+      letter-spacing: 0.02em;
+    }
+    .policy-section p {
+      font-family: 'Barlow', sans-serif;
+      font-size: 0.95rem;
+      color: var(--text-light);
+      line-height: 1.85;
+      margin-bottom: 16px;
+    }
+    .policy-section p:last-child {
+      margin-bottom: 0;
+    }
+    .policy-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .policy-section ul li {
+      font-family: 'Barlow', sans-serif;
+      font-size: 0.95rem;
+      color: var(--text-light);
+      line-height: 1.7;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .policy-section ul li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--primary-color);
+      flex-shrink: 0;
+      margin-top: 8px;
+    }
+
+    /* --- Divider between sections --- */
+    .policy-divider {
+      width: 100%;
+      height: 1px;
+      background: var(--border-color);
+      margin-bottom: 56px;
+    }
+
+    /* --- Highlight box for important notices --- */
+    .policy-highlight {
+      background: rgba(232, 255, 0, 0.05);
+      border: 1px solid rgba(232, 255, 0, 0.2);
+      border-left: 3px solid var(--primary-color);
+      padding: 20px 24px;
+      margin: 24px 0;
+      border-radius: 2px;
+    }
+    .policy-highlight p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+    .policy-highlight strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    /* --- Contact box at the end --- */
+    .policy-contact-box {
+      background: var(--surface-2);
+      border: 1px solid var(--border-color);
+      border-top: 3px solid var(--primary-color);
+      padding: 32px;
+      margin-top: 64px;
+      text-align: center;
+    }
+    .policy-contact-box h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 1.5rem;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .policy-contact-box p {
+      font-family: 'Barlow', sans-serif;
+      font-size: 0.9rem;
+      color: var(--text-light);
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+    .policy-contact-box a.btn {
+      margin: 0 auto;
+    }
+
+    /* --- Back to top button --- */
+    .back-to-top {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-light);
+      text-decoration: none;
+      margin-top: 48px;
+      transition: color 0.2s;
+    }
+    .back-to-top:hover {
+      color: var(--primary-color);
+    }
+    .back-to-top i {
+      font-size: 0.75rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR (scrolled = always opaque on inner pages) -->
+  <header class="header scrolled">
+    <div class="container">
+      <!-- CLIENT EDIT: update gym name if it changes -->
+      <a href="./index.html" class="logo">IRONFORGE<span>GYM</span></a>
+      <div class="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      <nav class="nav-links">
+        <a href="./index.html">Home</a>
+        <a href="./classes.html">Classes</a>
+        <a href="./trainers.html">Trainers</a>
+        <a href="./membership.html">Membership</a>
+        <a href="./transformations.html">Transformations</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./contact.html" class="btn btn-primary">Free Trial</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="container fade-in">
+      <h1>PRIVACY POLICY</h1>
+      <p>How we collect, use, and protect your information</p>
+    </div>
+  </div>
+
+  <!-- POLICY CONTENT -->
+  <section style="background: var(--dark-bg);">
+    <div class="policy-wrapper">
+
+      <!-- ── Meta bar ─────────────────────────────── -->
+      <div class="policy-meta fade-in">
+        <!-- CLIENT EDIT: update "Last updated" date whenever you revise this page -->
+        <div class="policy-meta-item">
+          <i class="fas fa-calendar-alt"></i>
+          <span>Last updated: January 1, 2025</span>
+        </div>
+        <!-- CLIENT EDIT: update version number if you keep revisions -->
+        <div class="policy-meta-item">
+          <i class="fas fa-file-alt"></i>
+          <span>Version 1.0</span>
+        </div>
+        <!-- CLIENT EDIT: update jurisdiction to your country / state -->
+        <div class="policy-meta-item">
+          <i class="fas fa-globe"></i>
+          <span>Applicable jurisdiction: Your Country</span>
+        </div>
+      </div>
+
+      <!-- ── Table of Contents ─────────────────────── -->
+      <div class="policy-toc fade-in">
+        <h2>Contents</h2>
+        <ol>
+          <li><a href="#section-1">Information We Collect</a></li>
+          <li><a href="#section-2">How We Use Your Information</a></li>
+          <li><a href="#section-3">Sharing of Information</a></li>
+          <li><a href="#section-4">Data Retention</a></li>
+          <li><a href="#section-5">Cookies &amp; Tracking</a></li>
+          <li><a href="#section-6">Your Rights</a></li>
+          <li><a href="#section-7">Security</a></li>
+          <li><a href="#section-8">Children's Privacy</a></li>
+          <li><a href="#section-9">Changes to This Policy</a></li>
+          <li><a href="#section-10">Contact Us</a></li>
+        </ol>
+      </div>
+
+      <!-- ── Intro paragraph ───────────────────────── -->
+      <div class="policy-section fade-in">
+        <p>
+          <!-- CLIENT EDIT: replace "Ironforge Gym" with your registered business name -->
+          Welcome to Ironforge Gym ("we", "us", or "our"). We are committed to protecting your personal
+          information and your right to privacy. This Privacy Policy explains what information we collect,
+          how we use it, and what rights you have in relation to it.
+        </p>
+        <p>
+          By using our website, signing up for a membership, booking a class, or contacting us through
+          any channel, you agree to the collection and use of information in accordance with this policy.
+        </p>
+      </div>
+
+      <div class="policy-divider"></div>
+
+      <!-- ── Section 1 ──────────────────────────────── -->
+      <div class="policy-section fade-in" id="section-1">
+        <span class="policy-section-number">01</span>
+        <h2>Information We Collect</h2>
+        <p>
+          We collect information that you provide directly to us, information collected automatically
+          when you use our website, and information from third-party sources.
+        </p>
+
+        <!-- CLIENT EDIT: add or remove items from the list below to match what your gym actually collects -->
+        <ul>
+          <li><strong style="color:var(--white)">Contact details</strong> — your name, email address, phone number, and mailing address when you fill in our contact or membership forms.</li>
+          <li><strong style="color:var(--white)">Health &amp; fitness information</strong> — goals, fitness level, medical conditions, or injuries that you voluntarily share when joining or booking a class.</li>
+          <li><strong style="color:var(--white)">Payment information</strong> — billing details processed securely through our payment provider. We do not store your full card number.</li>
+          <li><strong style="color:var(--white)">Usage data</strong> — pages visited, time spent on the site, referring URLs, device type, browser, and IP address collected automatically via cookies and analytics tools.</li>
+          <li><strong style="color:var(--white)">Communications</strong> — messages, enquiries, or feedback you send us via email, WhatsApp, or the website contact form.</li>
+        </ul>
+      </div>
+
+      <div class="policy-divider"></div>
+
+      <!-- ── Section 2 ──────────────────────────────── -->
+      <div class="policy-section fade-in" id="section-2">
+        <span class="policy-section-number">02</span>
+        <h2>How We Use Your Information</h2>
+        <p>We use the information we collect for the following purposes:</p>
+
+        <!-- CLIENT EDIT: adjust list to reflect your actual use cases -->
+        <ul>
+          <li>To process membership registrations, class bookings, and free trial requests.</li>
+          <li>To communicate with you about your account, bookings, schedule changes, or promotions.</li>
+          <li>To personalise your training experience and recommend suitable classes or trainers.</li>
+          <li>To send marketing emails or SMS messages — only if you have opted in to receive them.</li>
+          <li>To improve our website, services, and overall member experience.</li>
+          <li>To comply with legal obligations and resolve disputes.</li>
+        </ul>
+
+        <div class="policy-highlight">
+          <p><strong>Marketing opt-out:</strong> You can unsubscribe from marketing communications
+          at any time by clicking "Unsubscribe" in any email we send, or by contacting us directly
+          at the email address in Section 10.</p>
+        </div>
+      </div>
+
+      <div class="policy-divider"></div>
+
+      <!-- ── Section 3 ──────────────────────────────── -->
+      <div class="policy-section fade-in" id="section-3">
+        <span class="policy-section-number">03</span>
+        <h2>Sharing of Information</h2>
+        <p>
+          We do not sell, trade, or rent your personal information to third parties. We may share
+          your data only in the following limited circumstances:
+        </p>
+
+        <!-- CLIENT EDIT: update with actual third-party tools you use (booking software, payment processor, email platform, etc.) -->
+        <ul>
+          <li><strong style="color:var(--white)">Service providers</strong> — trusted third-party vendors who help us operate the website, process payments, or send emails (e.g. payment processors, email platforms, booking systems). They are contractually obligated to keep your data confidential.</li>
+          <li><strong style="color:var(--white)">Legal requirements</strong> — if required by law, court order, or governmental authority.</li>
+          <li><strong style="color:var(--white)">Business transfers</strong> — in the event of a merger, acquisition, or sale of assets, your data may be transferred as part of that transaction.</li>
+        </ul>
+      </div>
+
+      <div class="policy-divider"></div>
+
+      <!-- ── Section 4 ──────────────────────────────── -->
+      <div class="policy-section fade-in" id="section-4">
+        <span class="policy-section-number">04</span>
+        <h2>Data Retention</h2>
+        <p>
+          <!-- CLIENT EDIT: update retention period to match your actual policy -->
+          We retain your personal information for as long as your membership is active or as
+          needed to provide you with our services. If you cancel your membership or request
+          deletion, we will remove or anonymise your data within <strong style="color:var(--white)">30 days</strong>,
+          unless we are legally required to retain it longer (for example, financial records).
+        </p>
+        <p>
+          Website usage data collected via analytics tools is typically retained for
+          <strong style="color:var(--white)">26 months</strong> before automatic deletion.
+          <!-- CLIENT EDIT: match this to your analytics platform's actual retention setting -->
+        </p>
+      </div>
+
+      <div class="policy-divider"></div>
+
+      <!-- ── Section 5 ──────────────────────────────── -->
+      <div class="policy-section fade-in" id="section-5">
+        <span class="policy-section-number">05</span>
+        <h2>Cookies &amp; Tracking</h2>
+        <p>
+          Our website uses cookies — small text files stored on your browser — to improve your
+          browsing experience and analyse site traffic.
+        </p>
+
+        <!-- CLIENT EDIT: update to reflect the actual cookies / analytics tools you use -->
+        <ul>
+          <li><strong style="color:var(--white)">Essential cookies</strong> — required for the website to function (e.g. session management). Cannot be disabled.</li>
+          <li><strong style="color:var(--white)">Analytics cookies</strong> — help us understand how visitors interact with the site (e.g. Google Analytics). You may opt out via your browser settings.</li>
+          <li><strong style="color:var(--white)">Marketing cookies</strong> — used to show relevant ads on third-party platforms. Only set if you have consented.</li>
+        </ul>
+
+        <p>
+          You can control or disable cookies through your browser settings at any time.
+          Note that disabling certain cookies may affect the functionality of the website.
+        </p>
+      </div>
+
+      <div class="policy-divider"></div>
+
+      <!-- ── Section 6 ──────────────────────────────── -->
+      <div class="policy-section fade-in" id="section-6">
+        <span class="policy-section-number">06</span>
+        <h2>Your Rights</h2>
+        <p>
+          Depending on your location, you may have the following rights regarding your personal data.
+          <!-- CLIENT EDIT: update rights section to match the data protection laws of your country (e.g. GDPR for EU, PDPB for India) -->
+        </p>
+
+        <ul>
+          <li><strong style="color:var(--white)">Right of access</strong> — request a copy of the personal data we hold about you.</li>
+          <li><strong style="color:var(--white)">Right to rectification</strong> — ask us to correct inaccurate or incomplete data.</li>
+          <li><strong style="color:var(--white)">Right to erasure</strong> — request deletion of your personal data, subject to legal obligations.</li>
+          <li><strong style="color:var(--white)">Right to restrict processing</strong> — ask us to limit how we use your data in certain circumstances.</li>
+          <li><strong style="color:var(--white)">Right to data portability</strong> — request your data in a commonly used, machine-readable format.</li>
+          <li><strong style="color:var(--white)">Right to object</strong> — object to processing of your data for marketing purposes at any time.</li>
+        </ul>
+
+        <p>
+          To exercise any of these rights, please contact us using the details in Section 10.
+          We will respond within <strong style="color:var(--white)">30 days</strong>.
+        </p>
+      </div>
+
+      <div class="policy-divider"></div>
+
+      <!-- ── Section 7 ──────────────────────────────── -->
+      <div class="policy-section fade-in" id="section-7">
+        <span class="policy-section-number">07</span>
+        <h2>Security</h2>
+        <p>
+          We implement appropriate technical and organisational measures to protect your personal
+          information against unauthorised access, alteration, disclosure, or destruction. These
+          include SSL encryption on our website, access controls on our systems, and regular
+          security reviews.
+        </p>
+        <p>
+          However, no method of transmission over the internet is 100% secure. While we strive
+          to protect your data, we cannot guarantee absolute security.
+        </p>
+      </div>
+
+      <div class="policy-divider"></div>
+
+      <!-- ── Section 8 ──────────────────────────────── -->
+      <div class="policy-section fade-in" id="section-8">
+        <span class="policy-section-number">08</span>
+        <h2>Children's Privacy</h2>
+        <p>
+          <!-- CLIENT EDIT: adjust age threshold to match your jurisdiction (13 for US COPPA, 16 for GDPR in some EU countries) -->
+          Our services are not directed at individuals under the age of <strong style="color:var(--white)">16</strong>.
+          We do not knowingly collect personal information from children. If you believe a child
+          has provided us with their data, please contact us immediately and we will delete the
+          information.
+        </p>
+      </div>
+
+      <div class="policy-divider"></div>
+
+      <!-- ── Section 9 ──────────────────────────────── -->
+      <div class="policy-section fade-in" id="section-9">
+        <span class="policy-section-number">09</span>
+        <h2>Changes to This Policy</h2>
+        <p>
+          We may update this Privacy Policy from time to time to reflect changes in our practices
+          or for legal, operational, or regulatory reasons. When we make changes, we will update
+          the "Last updated" date at the top of this page.
+        </p>
+        <p>
+          We encourage you to review this page periodically. Continued use of our website after
+          changes are posted constitutes your acceptance of the updated policy.
+        </p>
+      </div>
+
+      <div class="policy-divider"></div>
+
+      <!-- ── Section 10 ─────────────────────────────── -->
+      <div class="policy-section fade-in" id="section-10">
+        <span class="policy-section-number">10</span>
+        <h2>Contact Us</h2>
+        <p>
+          If you have any questions, concerns, or requests regarding this Privacy Policy or
+          your personal data, please contact us:
+        </p>
+
+        <!-- CLIENT EDIT: update ALL contact details below -->
+        <ul>
+          <li><strong style="color:var(--white)">Business name:</strong> Ironforge Gym</li>
+          <li><strong style="color:var(--white)">Address:</strong> 123 Fitness Ave, Ground Floor, Your City, ST 00000</li>
+          <li><strong style="color:var(--white)">Email:</strong> <a href="mailto:kc.webdev08@gmail.com" style="color:var(--primary-color);">kc.webdev08@gmail.com</a></li>
+          <li><strong style="color:var(--white)">Phone:</strong> <a href="tel:+919980908419" style="color:var(--primary-color);">+91 99809 08419</a></li>
+        </ul>
+      </div>
+
+      <!-- ── Bottom CTA box ─────────────────────────── -->
+      <div class="policy-contact-box fade-in">
+        <h3>Still Have Questions?</h3>
+        <p>Our team is happy to walk you through any privacy concerns.<br>Reach out and we'll respond within 24 hours.</p>
+        <!-- CLIENT EDIT: update email href if email address changes -->
+        <a href="mailto:info@ironforgegym.com" class="btn btn-primary">
+          EMAIL US <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <!-- Back to top -->
+      <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i> Back to Top
+      </a>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <!-- CLIENT EDIT: gym name -->
+          <a href="./index.html" class="footer-logo">IRONFORGE<span>GYM</span></a>
+          <p>Forge your strongest self. Premium training for serious athletes.</p>
+          <div class="social-icons">
+            <!-- CLIENT EDIT: replace # with your real social media URLs -->
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <div class="footer-links">
+            <a href="./index.html">Home</a>
+            <a href="./classes.html">Classes</a>
+            <a href="./trainers.html">Trainers</a>
+            <a href="./membership.html">Membership</a>
+            <a href="./contact.html">Contact</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Programs</h3>
+          <div class="footer-links">
+            <a href="./classes.html">HIIT Training</a>
+            <a href="./classes.html">Powerlifting</a>
+            <a href="./classes.html">Boxing &amp; MMA</a>
+            <a href="./classes.html">Spin Cycling</a>
+            <a href="./classes.html">Yoga &amp; Mobility</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Visit Us</h3>
+          <div class="footer-links">
+            <!-- CLIENT EDIT: address -->
+            <span><i class="fas fa-map-marker-alt"></i>123 Fitness Ave, Your City, ST 00000</span>
+            <!-- CLIENT EDIT: opening hours -->
+            <span><i class="fas fa-clock"></i>Mon–Fri: 5AM–11PM · Sat–Sun: 7AM–9PM</span>
+            <!-- CLIENT EDIT: phone number -->
+            <a href="tel:+919980908419"><i class="fas fa-phone"></i>+91 99809 08419</a>
+            <!-- CLIENT EDIT: email -->
+            <a href="mailto:kc.webdev08@gmail.com"><i class="fas fa-envelope"></i>kc.webdev08@gmail.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <!-- CLIENT EDIT: year and gym name -->
+        <p>&copy; 2025 Ironforge Gym. All rights reserved.</p>
+        <div>
+          <a href="./privacy-policy.html" style="color:var(--primary-color);">Privacy Policy</a>
+          <a href="./terms-of-service.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOATING BUTTON -->
+  <!-- CLIENT EDIT: update phone number — format: https://wa.me/COUNTRYCODEPHONENUMBER -->
+  <a href="https://wa.me/9980908419" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>
